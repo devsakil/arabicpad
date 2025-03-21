@@ -138,6 +138,21 @@
       }
 
       textArea.addEventListener("keydown", (event) => {
+        // Allow default behavior for common shortcuts
+        if (
+          (event.ctrlKey &&
+            ["z", "Z", "c", "C", "v", "V", "x", "X", "a", "A"].includes(
+              event.key
+            )) ||
+          (event.metaKey &&
+            ["z", "Z", "c", "C", "v", "V", "x", "X", "a", "A"].includes(
+              event.key
+            )) // For macOS
+        ) {
+          return; // Don't block these keys
+        }
+
+        // Replace mapped Arabic characters
         if (mappings[event.key]) {
           event.preventDefault();
           updateText(mappings[event.key]);
