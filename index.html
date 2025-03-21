@@ -3,12 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ArabicPad Clone</title>
+    <title>ArabicPad -Joytech</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>ArabicPad</h1>
-    <h3>Joytech Foundation</h3>
+    <div class="header">
+      <a
+        target="_blank"
+        style="margin-right: 110px"
+        href="https://buymeacoffee.com/joytech"
+        class="coffe"
+      >
+        Buy Me a Coffee
+        <img src="/coffe.png" alt="" />
+      </a>
+      <div style="margin-left: 110px">
+        <h1>ArabicPad</h1>
+        <h3>Joytech Foundation</h3>
+      </div>
+      <div></div>
+    </div>
+
     <textarea id="textArea"></textarea>
     <div class="controls">
       <label
@@ -36,26 +51,6 @@
     <br />
     <br />
     <br />
-
-    <a
-      target="_blank"
-      href="https://buymeacoffee.com/joytech"
-      style="text-decoration: none; color: inherit"
-    >
-      <h3 class="coffe">
-        Buy Me a Coffee
-        <img
-          src="/coffe.png"
-          alt=""
-          style="
-            width: 20px;
-            height: 30px;
-            vertical-align: middle;
-            margin-left: 5px;
-          "
-        />
-      </h3>
-    </a>
 
     <script>
       const mappings = {
@@ -123,8 +118,19 @@
       for (const key in mappings) {
         const btn = document.createElement("div");
         btn.className = "key";
-        btn.textContent = mappings[key] + "\n" + key;
+
+        const englishSpan = document.createElement("span");
+        englishSpan.className = "english";
+        englishSpan.textContent = key;
+
+        const arabicSpan = document.createElement("span");
+        arabicSpan.className = "arabic";
+        arabicSpan.textContent = mappings[key];
+
+        btn.appendChild(englishSpan);
+        btn.appendChild(arabicSpan);
         btn.onclick = () => updateText(mappings[key]);
+
         keyboardDiv.appendChild(btn);
       }
 

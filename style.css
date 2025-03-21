@@ -87,3 +87,59 @@ textarea {
 .controls {
   margin: 10px 0;
 }
+
+.key {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+.key span {
+  display: block;
+}
+
+.key .english {
+  color: #a7a7a7;
+  font-size: 14px;
+}
+
+.key .arabic {
+  font-size: 25px;
+  font-family: "KFGQ_hafs", sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+h1,
+h3 {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.coffe {
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.coffe img {
+  width: 20px;
+  height: 30px;
+}
