@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "MyArabicFont";
+  src: url("fonts/myarabicfont.woff2") format("woff2"),
+    url("fonts/myarabicfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply to specific elements */
+body {
+  font-family: "MyArabicFont", Arial, sans-serif;
+}
+textarea {
+  font-family: "MyArabicFont", Traditional Arabic, serif;
+}
+.key {
+  font-family: "MyArabicFont", sans-serif;
+}
