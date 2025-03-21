@@ -1,49 +1,49 @@
 @font-face {
   font-family: "Al_Mushaf";
-  src: url("fonts/Al_Mushaf.ttf") format("ttf");
+  src: url("fonts/Al_Mushaf.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "kaleel";
-  src: url("fonts/kaleel.ttf") format("ttf");
+  src: url("fonts/kaleel.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "KFGQ_hafs";
-  src: url("fonts/KFGQ_hafs.ttf") format("ttf");
+  src: url("fonts/KFGQ_hafs.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "khayma";
-  src: url("fonts/khayma.ttf") format("ttf");
+  src: url("fonts/khayma.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "madani";
-  src: url("fonts/madani.ttf") format("ttf");
+  src: url("fonts/madani.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "me_quran";
-  src: url("fonts/me_quran.ttf") format("ttf");
+  src: url("fonts/me_quran.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "qalam";
-  src: url("fonts/qalam.ttf") format("ttf");
+  src: url("fonts/qalam.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Qayyum";
-  src: url("fonts/Qayyum.ttf") format("ttf");
+  src: url("fonts/Qayyum.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -55,9 +55,9 @@ body {
 }
 
 textarea {
-  width: 100vh;
+  width: 85vw;
   height: 250px;
-  font-size: 20px;
+  font-size: 35px;
   padding: 20px;
   direction: rtl;
   font-family: "KFGQ_hafs", Traditional Arabic, Arial, sans-serif;
@@ -65,6 +65,7 @@ textarea {
 
 .keyboard {
   display: grid;
+  padding: 50px;
   grid-template-columns: repeat(10, 1fr);
   gap: 5px;
 }
