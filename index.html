@@ -169,12 +169,19 @@
         const beforeText = textArea.value.substring(0, start);
         const afterText = textArea.value.substring(end);
 
-        // Check if last character is "i" and the current key is also "i"
-        if (beforeText.endsWith("ِ") && event.key === "i") {
+        // Handle special cases for double vowels
+        if (beforeText.endsWith(mappings["i"]) && event.key === "i") {
           event.preventDefault();
-          // Replace the previous "ِ" with "ٍ" (kasratain or tanween kasr)
           textArea.value = beforeText.slice(0, -1) + mappings["ii"] + afterText;
-          textArea.selectionStart = textArea.selectionEnd = start; // Keep cursor in place
+          textArea.selectionStart = textArea.selectionEnd = start;
+        } else if (beforeText.endsWith(mappings["e"]) && event.key === "e") {
+          event.preventDefault();
+          textArea.value = beforeText.slice(0, -1) + mappings["ee"] + afterText;
+          textArea.selectionStart = textArea.selectionEnd = start;
+        } else if (beforeText.endsWith(mappings["u"]) && event.key === "u") {
+          event.preventDefault();
+          textArea.value = beforeText.slice(0, -1) + mappings["uu"] + afterText;
+          textArea.selectionStart = textArea.selectionEnd = start;
         } else if (mappings[event.key]) {
           event.preventDefault();
           textArea.value = beforeText + mappings[event.key] + afterText;
